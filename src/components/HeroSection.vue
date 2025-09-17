@@ -13,7 +13,7 @@
           </p>
           <div class="button-group">
             <button class="primary-button">Learn More</button>
-            <button class="secondary-button">Contact Us</button>
+            <button class="secondary-button">Get in Touch</button>
           </div>
         </div>
         <div class="image-content">
@@ -137,5 +137,38 @@ body {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .text-content, .image-content {
+    text-align: center;
+  }
+
+  .hero-heading {
+    font-size: 1rem;
+  }
+
+  .hero-subheading {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    max-width: 100%;
+  }
+
+  .button-group {
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 70%;
+    height: auto;
+    margin-top: 2rem;
+  }
 }
 </style>

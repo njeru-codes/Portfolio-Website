@@ -2,10 +2,6 @@
   <div class="about-wrapper">
     <div class="container">
       <div class="content-card">
-        <!-- Decorative grid background -->
-        <div class="grid-background">
-          <div v-for="n in 100" :key="n" class="grid-cell"></div>
-        </div>
 
         <div class="content">
           <!-- Left content -->
@@ -146,8 +142,7 @@ import AboutImg from "@/assets/Group 1(1)-Photoroom.png"
     color: #e5e7eb; /* equivalent to text-gray-200 */
     /* padding: 80px 16px; */
     background: #000;
-    height: 100vh;
-    width: 100vw;
+
 }
 
 .container {
@@ -338,22 +333,7 @@ import AboutImg from "@/assets/Group 1(1)-Photoroom.png"
     }
 }
 
-/* Background grid pattern */
-.grid-background {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    opacity: 0.1;
-    filter: blur(1px);
-    transform: scale(1.5);
-    z-index: 0;
-}
 
-.grid-cell {
-    border: 1px solid rgba(55, 65, 81, 0.3);
-}
 
 /* Logos at the bottom */
 .logos {
@@ -373,7 +353,17 @@ import AboutImg from "@/assets/Group 1(1)-Photoroom.png"
         gap: 40px;
     }
 }
-
+@media (max-width: 768px) {
+    .content-card{
+      padding:0 0rem;
+    }
+    .content{
+      padding: 0;
+    }
+    .title{
+      font-size: 1.5rem;
+    }
+}
 .logo-image {
     height: 24px;
     opacity: 0.6;

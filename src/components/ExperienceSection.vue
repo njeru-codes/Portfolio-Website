@@ -12,7 +12,6 @@
                         <ul class="duties">
                             <li>Escalate validated and confirmed incidents to the incident response team and notify clients of required mitigation actions.</li>
                             <li>Perform log analysis from diverse sources (FW, IDS, Windows DC, Cisco appliances, AV, email security, etc.).</li>
-                            <li>Conduct threat intel research, run sandbox static analysis, and track/update incidents in line with client updates.</li>
                         </ul>
                     </div>
                 </div>
@@ -25,8 +24,6 @@
                         <p class="position">Software Developer</p>
                         <ul class="duties">
                             <li>Designed and developed DurraPay, a custom Payment Service Provider (PSP) system to streamline payment collections and disbursements.</li>
-                            <li>Integrated secure payment workflows and APIs to handle transactions for both individual users and business clients.</li>
-                            <li>Implemented robust authentication mechanisms, including JWT with device-level session control.</li>
                             <li>Conducted security assessments and applied best practices to harden application infrastructure.</li>
                         </ul>
                     </div>
@@ -75,7 +72,7 @@
 }
 
 .container {
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
 }
@@ -83,7 +80,7 @@
 .section-title {
     font-size: 2.25rem;
     font-weight: 700;
-    text-align: center;
+    text-align: left;
     color: white;
     margin-bottom: 48px;
 }
@@ -189,5 +186,43 @@
     position: absolute;
     left: 0;
     top: -2px;
+}
+
+@media (max-width: 768px) {
+    .experience-wrapper{
+        padding:1rem 0;
+    }
+    .container{
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+    .section-title {
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+    }
+    .timeline{
+        border-left: none;
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+    .timeline-dot{
+        display: none;
+    }
+    .timeline-item{
+        padding:0.75rem  0;
+    }
+    .timeline-content{
+        width: 100;
+    }
+    .company{
+        font-size: 1rem;
+    }
+    .position{
+        font-size: 0.9rem;
+    }
+    .duties li{
+        font-size: 0.8rem;
+    }
+    
 }
 </style>
