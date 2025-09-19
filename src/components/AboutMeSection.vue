@@ -283,7 +283,7 @@ import AboutImg from "@/assets/Group 1(1)-Photoroom.png"
 .shield-container {
     position: relative;
     width: 100%;
-    /* max-width: 448px; */
+    max-width: 448px;
     aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
@@ -325,11 +325,11 @@ import AboutImg from "@/assets/Group 1(1)-Photoroom.png"
 @keyframes pulse-animation {
     0%, 100% {
         transform: scale(1);
-        opacity: 0.3;
+        opacity: 0.2;
     }
     50% {
         transform: scale(1.1);
-        opacity: 0.5;
+        opacity: 0.3;
     }
 }
 

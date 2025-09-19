@@ -1,29 +1,71 @@
-# .
+# Portfolio Website
 
-This template should help get you started developing with Vue 3 in Vite.
+This is my personal portfolio website built using **Vue.js**.  
+You can view it live at: 👉 [https://njerumtwaiti.com](https://njerumtwaiti.com)
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+##  Development Setup
 
-## Customize configuration
+To run the development server locally:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+1. **Clone the repository**
+    ```bash
+    git clone https://github.com/njeru-codes/Portfolio-Website
+    ````
 
-## Project Setup
+2. **Navigate into the project directory**
+   ```bash
+   cd portfolio-website
+   ```
 
-```sh
-npm install
-```
+3. **Install dependencies**
 
-### Compile and Hot-Reload for Development
+   ```bash
+   npm install
+   ```
 
-```sh
-npm run dev
-```
+4. **Start the development server**
 
-### Compile and Minify for Production
+   ```bash
+   npm run dev
+   ```
 
-```sh
-npm run build
-```
+---
+
+## 📦 Production Deployment
+
+To build and deploy the website to a production server:
+
+1. **Build the production files**
+
+   ```bash
+   npm run build
+   ```
+
+2. **Preview the production build locally**
+
+   ```bash
+   npm run preview
+   ```
+
+3. **Deploy to a server**
+
+   * Upload the contents of the `dist/` directory to your server
+   * Serve the files using a static file server or behind a reverse proxy such as **Nginx**
+
+---
+
+## 🛠️ Tech Stack
+
+* [Vue.js](https://vuejs.org/)
+* [Vite](https://vitejs.dev/) (for build and dev server)
+
+---
+
+## Author
+
+**Njẹru Mtwaiti** <br/>
+Website: [njerumtwaiti.com](https://njerumtwaiti.com) <br/>
+GitHub: [@yourusername](https://github.com/yourusername)
+

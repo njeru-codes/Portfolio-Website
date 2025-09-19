@@ -26,7 +26,7 @@
 
 
 <script setup>
-import HeroImg from "@/assets/hroimg.png"
+import HeroImg from "@/assets/Group2.png"
 </script>
 
 <style scoped>
@@ -44,6 +44,8 @@ body {
   padding: 4rem 0;
   position: relative;
   overflow: hidden;
+  /* Use a more flexible height on mobile */
+  min-height: 100vh;
 }
 
 .container {
@@ -55,25 +57,25 @@ body {
 .hero-content {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 1rem;
 }
 
 .text-content {
-  flex: 1;
+  flex: 1.25;
 }
 
 .hero-heading {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 600;
   color: #a0a0a0;
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
 }
 
 .hero-subheading {
-  font-size: 3.5rem;
+  font-size: 3.7rem;
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
@@ -85,10 +87,11 @@ body {
 }
 
 .hero-description {
-  color: #a0a0a0;
+  color: #fff;
   line-height: 1.6;
   max-width: 600px;
   margin-top: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .button-group {
@@ -130,6 +133,7 @@ body {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center; /* Center the image vertically within its container */
 }
 
 .hero-image {
@@ -138,15 +142,33 @@ body {
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
+
 @media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 2rem 0; /* Add more vertical padding for mobile */
+  }
+
   .hero-content {
     flex-direction: column;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    gap: 2rem; /* Reduce the gap on mobile */
   }
 
   .text-content, .image-content {
     text-align: center;
+    width: 100%; /* Ensure they take up the full width */
+    padding: 0 0rem; 
+  }
+
+  .text-content {
+    order: 1; /* Pushes the text content below the image */
+  }
+
+  .image-content {
+    order: 2; /* Pushes the image to the top */
+    padding-top: 2rem; /* Add space at the top */
   }
 
   .hero-heading {
@@ -154,21 +176,30 @@ body {
   }
 
   .hero-subheading {
-    font-size: 2.5rem;
+    font-size: 2rem; /* A slightly smaller, more readable size */
   }
 
   .hero-description {
     max-width: 100%;
+    font-size: 1rem;
+    padding: 0 0.5rem; /* Add a little more padding */
   }
 
   .button-group {
-    justify-content: center;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.5rem; /* Reduce gap between buttons */
+    align-items: center; /* Center the buttons */
+  }
+
+  .primary-button, .secondary-button {
+    width: 80%; /* Make buttons full-width */
+    padding: 0.75rem 1rem; /* Adjust padding for better sizing */
   }
 
   .hero-image {
-    width: 70%;
+    max-width: 80%; /* A better size for mobile screens */
     height: auto;
-    margin-top: 2rem;
+    margin-top: 0;
   }
 }
 </style>
