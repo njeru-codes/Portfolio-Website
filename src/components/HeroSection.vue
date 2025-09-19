@@ -30,12 +30,7 @@ import HeroImg from "@/assets/Group2.png"
 </script>
 
 <style scoped>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #ffffff;
-  background-color: #1a1a1a;
-}
+
 
 .hero-section {
   background-color: #000;
@@ -46,6 +41,8 @@ body {
   overflow: hidden;
   /* Use a more flexible height on mobile */
   min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .container {
@@ -60,6 +57,7 @@ body {
   justify-content: center;
   gap: 4rem;
   padding-top: 1rem;
+  margin: auto;
 }
 
 .text-content {
