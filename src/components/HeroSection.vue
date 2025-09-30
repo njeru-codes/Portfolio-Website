@@ -1,25 +1,71 @@
 <template>
   <div class="hero-section">
     <div class="container">
-      <div class="hero-content">
-        <div class="text-content">
-          <h1 class="hero-heading">I'M NJERU  MTWAITI</h1>
-          <h2 class="hero-subheading">DELIVERING WORLD-CLASS CYBERSECURITY SOLUTIONS</h2>
-          <p class="hero-description">
-            As one of the leading experts in cybersecurity, I specialize in safeguarding your digital world 
-            with unmatched precision and expertise. From comprehensive IT support to advanced security strategies,
-             I provide a one-stop solution tailored to your needs. 
-            A true one-man powerhouse, I ensure your security is never compromised.
-          </p>
-          <div class="button-group">
-            <button class="primary-button">Learn More</button>
-            <button class="secondary-button">Get in Touch</button>
-          </div>
-        </div>
-        <div class="image-content">
-          <img :src="HeroImg" alt="A professional man looking forward" class="hero-image">
+      
+      <!-- header -->
+      <div class="header">
+        <div class="header-controls">
+          <div class="dot red"></div>
+          <div class="dot yellow"></div>
+          <div class="dot green"></div>
+          <p class="path">
+            <span>root@access: </span>$ cat welcome.txt</p>
         </div>
       </div>
+      <!-- header -->
+
+
+      <div class="content">
+        <div class="left-content">
+          <img :src="HeroImg" alt="Hero Image" class="hero-image" />
+        </div>
+
+      <div class="text-content">
+          <p class="hero-tagline">
+            <span class="fold">[</span>    
+            unlocking the undetectable. <span class="cursor">_ </span>
+            <span class="fold">]</span>
+          </p>
+          <h1 class="hero-title">
+            NJERU MTWAITI
+          </h1>
+          <h2 class="hero-subtitle">
+            Offensive Security Engineer
+          </h2>
+          <p class="hero-description">
+            I specialize in penetration testing, red teaming operations, and deep-dive vulnerability research, focusing on both network infrastructure and proprietary software security.
+          </p>
+
+          
+
+          <div class="hero-links">
+            <span>> Exploits/</span>
+            <span>> Research/</span>
+            <span>> Tools/</span>
+            <span>> Contact/</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#research" class="btn-primary">
+              <span class="neon-glow">Execute: Portfolio</span>
+            </a>
+            <a href="" target="_blank" class="btn-secondary">
+              <span>Connect: PGP Key</span>
+            </a>
+          </div>
+
+
+      </div>
+      </div>
+
+      <div class="header end-header">
+            <div class="header-controls">
+              <h3 class="path">
+                <span>root@access: </span>~$
+              </h3>
+            </div>
+      </div>
+
     </div>
   </div>
 </template>
@@ -30,16 +76,19 @@ import HeroImg from "@/assets/Group2.png"
 </script>
 
 <style scoped>
-
+:root {
+            --color-accent-green: #00FF41; /* Primary Hacking Color */
+            --color-accent-blue: #00BFFF; /* Secondary Data Color (Deep Sky Blue) */
+            --color-dark: #070710;
+}
 
 .hero-section {
   background-color: #000;
   height: 100vh;
   width: 100%;
-  padding: 4rem 0;
+  padding: 2rem 0;
   position: relative;
   overflow: hidden;
-  /* Use a more flexible height on mobile */
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -47,157 +96,240 @@ import HeroImg from "@/assets/Group2.png"
 
 .container {
   max-width: 1200px;
+  width: 100%;
+  height: fit-content;
+  min-height: 80vh;
   margin: 0 auto;
   padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.hero-content {
+
+/* header */
+.header {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  background: #332b2bf3;
+  border-bottom: 1px solid #374151; 
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 0.5rem 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 4rem;
-  padding-top: 1rem;
-  margin: auto;
 }
 
-.text-content {
-  flex: 1.25;
-}
-
-.hero-heading {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #a0a0a0;
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
-}
-
-.hero-subheading {
-  font-size: 3.7rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0;
-  color: #ffffff;
-}
-
-.hero-subheading span {
-  color: #00ff7f;
-}
-
-.hero-description {
-  color: #fff;
-  line-height: 1.6;
-  max-width: 600px;
-  margin-top: 1.5rem;
-  font-size: 1.2rem;
-}
-
-.button-group {
+.header-controls {
   display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
+  align-items: center;
+  gap: 0.5rem; 
+  margin-bottom: 0.75rem;
 }
 
-.primary-button, .secondary-button {
-  padding: 1rem 2.5rem;
-  border-radius: 5px;
+.dot {
+  width: 0.75rem; 
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+.dot.red {
+  background-color: #ef4444; 
+}
+.dot.yellow {
+  background-color: #f59e0b; 
+}
+.dot.green {
+  background-color: #22c55e; 
+}
+
+.path {
+  margin-left: 0.5rem;
+  font-size: 1rem; 
+  color: #9ca3af; 
+  display: none;
+}
+.path span {
+  color: #00FF41;
   font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+}
+@media (min-width: 640px) {
+  .path {
+    display: inline; 
+  }
+}
+.header.end-header {
+  background: none;
   border: none;
+  margin: 2rem 0;
 }
+/* end header */
 
-.primary-button {
-  background-color: #00ff7f;
-  color: #121212;
-}
 
-.primary-button:hover {
-  background-color: #00e66a;
-}
 
-.secondary-button {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #00ff7f;
-}
 
-.secondary-button:hover {
-  background-color: #00ff7f;
-  color: #121212;
-}
-
-.image-content {
-  flex: 1;
+.content{
   display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
   justify-content: center;
-  align-items: center; /* Center the image vertically within its container */
+  width: 100%;
+  gap: 2rem;
 }
-
-.hero-image {
-  max-width: 100%;
+.left-content{
+  display: flex;
+  flex: 2;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.hero-image{
+  width: 100%;
+  max-width: 350px;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: 3px solid #cac8c823;
+  box-shadow: 0 0 20px rgba(0, 255, 133, 0.3);
 }
 
-@media (max-width: 768px) {
-  .hero-section {
-    height: auto;
-    padding: 2rem 0; /* Add more vertical padding for mobile */
-  }
 
-  .hero-content {
-    flex-direction: column;
-    padding-top: 0;
-    padding-bottom: 0;
-    gap: 2rem; /* Reduce the gap on mobile */
-  }
+/* text content */
+.text-content{
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+}
+.hero-tagline {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: 400;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+.hero-tagline .fold {
+  color: #00ff405d;
+  font-weight: bolder;
+}
+.cursor {
+  color: #00FF41;;
+  animation: blink 1s step-start infinite;
+  font-weight: bolder;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.hero-title {
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  font-size: 2.25rem;
+  color: #ffffff;
+}
 
-  .text-content, .image-content {
-    text-align: center;
-    width: 100%; /* Ensure they take up the full width */
-    padding: 0 0rem; 
-  }
-
-  .text-content {
-    order: 1; /* Pushes the text content below the image */
-  }
-
-  .image-content {
-    order: 2; /* Pushes the image to the top */
-    padding-top: 2rem; /* Add space at the top */
-  }
-
-  .hero-heading {
-    font-size: 1rem;
-  }
-
-  .hero-subheading {
-    font-size: 2rem; /* A slightly smaller, more readable size */
-  }
-
-  .hero-description {
-    max-width: 100%;
-    font-size: 1rem;
-    padding: 0 0.5rem; /* Add a little more padding */
-  }
-
-  .button-group {
-    flex-direction: column; /* Stack buttons vertically */
-    gap: 0.5rem; /* Reduce gap between buttons */
-    align-items: center; /* Center the buttons */
-  }
-
-  .primary-button, .secondary-button {
-    width: 80%; /* Make buttons full-width */
-    padding: 0.75rem 1rem; /* Adjust padding for better sizing */
-  }
-
-  .hero-image {
-    max-width: 80%; /* A better size for mobile screens */
-    height: auto;
-    margin-top: 0;
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 3.75rem; 
   }
 }
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 4.5rem; 
+  }
+}
+.hero-subtitle {
+  font-weight: 700; 
+  font-size: 2.25rem; 
+  color: var(--neon-green, #39ff14); 
+}
+
+@media (min-width: 640px) {
+  .hero-subtitle {
+    font-size: 1.5rem; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-subtitle {
+    font-size: 1.8rem; 
+  }
+}
+.hero-description {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji"; 
+  font-size: 1.125rem;
+  color: #d1d5db; 
+  margin: 2rem 0; 
+  max-width: 42rem; 
+}
+.hero-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  gap: 1rem; 
+  margin-bottom: 2.5rem; 
+  font-size: 1.23rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.hero-links span {
+  color: #4ade80; 
+}
+
+@media (min-width: 640px) {
+  .hero-links {
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* sm:grid-cols-4 */
+  }
+}
+.hero-actions {
+  display: flex;
+  flex-direction: column; 
+  gap: 1rem; 
+}
+
+@media (min-width: 640px) {
+  .hero-actions {
+    flex-direction: row; 
+    gap: 0; 
+  }
+
+  .hero-actions a + a {
+    margin-left: 1rem; 
+  }
+}
+
+.hero-actions a {
+  flex: 1; /* flex-1 */
+  text-align: center;
+  padding: 0.75rem 1rem; /* py-3 */
+  border-radius: 0.375rem; /* rounded-md */
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 700; /* font-bold */
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Primary button */
+.btn-primary {
+  border: 2px solid var(--neon, #39ff14); 
+  color: var(--neon, #39ff14);
+}
+
+/* Secondary button */
+.btn-secondary {
+  border: 2px solid #4b5563; 
+  color: #9ca3af; 
+}
+.btn-secondary:hover {
+  font-weight: bold;
+  color: #ffffff; 
+}
+
+
+/* text content */
+
 </style>
